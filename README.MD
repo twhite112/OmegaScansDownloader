@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
 # Im too lazy too make this look cool here but I promise I will 🛐.
 =======
 # Im too lazy too make this look cool but I promise I will 🛐.
->>>>>>> 6df8fa24646858a3ab11e3b8d576d2b365bf5a0f
-
 # Btw the code is working fine
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=symmetricalbyte_OmegaScansDownloader&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=symmetricalbyte_OmegaScansDownloader) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=symmetricalbyte_OmegaScansDownloader&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=symmetricalbyte_OmegaScansDownloader) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=symmetricalbyte_OmegaScansDownloader&metric=bugs)](https://sonarcloud.io/summary/new_code?id=symmetricalbyte_OmegaScansDownloader) ![GitHub language count](https://img.shields.io/github/languages/count/symmetricalbyte/OmegaScansDownloader) ![GitHub repo file count](https://img.shields.io/github/directory-file-count/symmetricalbyte/OmegaScansDownloader)
 
 # How to use
 First of all make sure you have [python](https://www.python.org/downloads/) installed
