@@ -1,3 +1,7 @@
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
 # Im too lazy too make this look cool here but I promise I will 🛐.
 
 # Btw the code is working fine

@@ -35,8 +35,6 @@ def better_dirname(dirname):
 
 def create_dir(html):
     soup = bs4(html, 'lxml')
-    # h1s = soup.find('h1', {'class': 'entry-title'}).text
-    # print(h1s)
     global name
     div = soup.find('div', {'class': 'allc'})
     soup2 = bs4(str(div), 'lxml')
@@ -49,7 +47,6 @@ def create_dir(html):
 def get_list(html):
     global imagenum
     soup = bs4(html, 'html.parser')
-    soup
     #print("Initiating The Download of "+ soup.find('h3', {'class': 'entry-title'}))
     imgtags = soup.find_all('img', {'class': 'alignnone'})
     for image in imgtags:
