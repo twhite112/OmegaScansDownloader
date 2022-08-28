@@ -4,21 +4,34 @@ import urllib
 import argparse
 import wget
 import os
+import sys
 import lxml
 
-url = "https://omegascans.org/cheer-up-namjoo-chapter-1/"
 imagenum = 0
+chapter_explain = '!under construction! Chapters You Wanna Scrape, Example: -C 12 [Gets Chapter 12], -C 1~4 [Gets Chapter 1, 2, 3, 4]'
 name = ""
+parsed_url = ''
 
-try:
-    parsed_url = requests.get(url).text
-except:
-    print("Wrong url, check your internet connection or the url")
-    sys.exit()
+def check_url(in_url):
+    try:
+        global parsed_url
+        parsed_url = requests.get(in_url).text
+    except:
+        print("Wrong url, check your internet connection or the url")
+        sys.exit()
 
-def initiate(html):
-    create_dir(html)
-    get_list(html)
+def better_dirname(dirname):
+    dirname = dirname.replace(' ', '-')
+    dirname = dirname.replace(':', '')
+    dirname = dirname.replace('*', '')
+    dirname = dirname.replace('?', '')
+    dirname = dirname.replace('"', '')
+    dirname = dirname.replace("'", '')
+    dirname = dirname.replace('|', '')
+    dirname = dirname.replace('>', '')
+    dirname = dirname.replace('<', '')
+    dirname = dirname.lower()
+    return dirname
 
 def create_dir(html):
     soup = bs4(html, 'lxml')
@@ -29,6 +42,7 @@ def create_dir(html):
     soup2 = bs4(str(div), 'lxml')
     for a in soup2.find_all('a', href=True):
         name = a.text
+    name = better_dirname(name)
     if not os.path.exists(name):
         os.makedirs(name)
 
@@ -47,6 +61,18 @@ def get_image(url):
     print()
     wget.download(url, out=name)
 
+def initiate(url):
+    check_url(url)
+    create_dir(parsed_url)
+    get_list(parsed_url)
+
 # initiate(parsed_url)
-initiate(parsed_url)
-print("Downloaded " + str(imagenum) + " images 🥳")
+if __name__ == '__main__':
+    try:
+        parser = argparse.ArgumentParser(description='Download Manga from OmegaScans 🍌', usage='%(prog)s [options] URL', epilog='Thanks for using %(prog)s ✌')
+        parser.add_argument('url', help='The URL to manga 🔥')
+        args = parser.parse_args()
+        initiate(args.url)
+        print("Downloaded " + str(imagenum) + " images 🥳")
+    except KeyboardInterrupt:
+        print('\nKeyboard interrupt detected \nBye 😔')
