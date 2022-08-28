@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
 # Im too lazy too make this look cool here but I promise I will 🛐.
 =======
 # Im too lazy too make this look cool but I promise I will 🛐.
->>>>>>> 6df8fa24646858a3ab11e3b8d576d2b365bf5a0f
-
 # Btw the code is working fine
 
 # How to use
