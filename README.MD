@@ -1,4 +1,4 @@
-# Im too lazy too make this look cool here but I promise I will 🛐.
+# Im too lazy too make this look cool but I promise I will 🛐.
 
 # Btw the code is working fine
 
