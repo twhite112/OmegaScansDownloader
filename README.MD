@@ -3,7 +3,7 @@
 # Btw the code is working fine
 
 # How to use
-First of all make sure you have [python](https://www.example.com) installed
+First of all make sure you have [python](https://www.python.org/downloads/) installed
 Then install the dependencies like this :
 ```
 pip install -r requirements.txt
