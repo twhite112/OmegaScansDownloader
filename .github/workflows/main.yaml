@@ -18,4 +18,4 @@ jobs:
         pip install -r requirements.txt
     - name: Build with PyInstaller
       run: |
-        pyinstaller -n OmegaScansDL -F --workpath ../cachedir --clean ../main.py
+        pyinstaller -n OmegaScansDL -F --workpath ./cachedir --clean ./main.py
