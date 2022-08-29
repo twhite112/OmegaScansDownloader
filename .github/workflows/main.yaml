@@ -17,8 +17,7 @@ jobs:
         pip install pyinstaller
         pip install -r requirements.txt
     - name: Build with PyInstaller
-      run: |
-        pyinstaller -n OmegaScansDL -F --workpath ./cachedir --clean ./main.py
+      run: pyinstaller -n OmegaScansDL -F --workpath ./cachedir --clean ./main.py
     - name: Upload Artifacts
       - uses: actions/upload-artifact@v3
         with:
