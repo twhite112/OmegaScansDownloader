@@ -7,7 +7,6 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: actions/upload-artifact@v3
     - name: Set Up Python 3.10.6
       uses: actions/setup-python@v1
       with:
